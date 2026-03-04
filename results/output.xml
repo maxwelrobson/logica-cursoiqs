@@ -1,61 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T20:35:28.894076" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T20:41:00.631430" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-03" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-03.robot">
-<test id="s1-s1-s1-s1-t1" name="Cálculo de Média" line="10">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nAluno: ${NOME}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.956454" elapsed="0.000863"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nDisciplina: ${DISCIPLINA}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.957653" elapsed="0.000555"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nNota 1: ${NOTA1}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.958483" elapsed="0.000390"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nNota 2: ${NOTA2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.959039" elapsed="0.000398"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nNota 3: ${NOTA3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.959594" elapsed="0.000367"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nNota 4: ${NOTA4}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.960098" elapsed="0.000309"/>
-</kw>
+<suite id="s1-s1-s1-s1" name="Exercicio-04" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-04.robot">
+<test id="s1-s1-s1-s1-t1" name="Idade em 2035" line="6">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-04T20:35:28.960988" level="INFO">${MEDIA} = 7</msg>
-<var>${MEDIA}</var>
-<arg>(${NOTA1} + ${NOTA2} + ${NOTA3} + ${NOTA4}) // 4</arg>
+<msg time="2026-03-04T20:41:00.690405" level="INFO">${RESULTADO} = 37</msg>
+<var>${RESULTADO}</var>
+<arg>${ANO_FUTURO} - ${ANO_NASCIMENTO}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.960576" elapsed="0.000750"/>
+<status status="PASS" start="2026-03-04T20:41:00.689785" elapsed="0.000770"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nMédia das notas: ${MEDIA}</arg>
+<arg>\nSua Idade em ${ANO_FUTURO} será: ${RESULTADO}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:35:28.961544" elapsed="0.000362"/>
+<status status="PASS" start="2026-03-04T20:41:00.690908" elapsed="0.001180"/>
 </kw>
-<status status="PASS" start="2026-03-04T20:35:28.953278" elapsed="0.008861"/>
+<status status="PASS" start="2026-03-04T20:41:00.683056" elapsed="0.009995"/>
 </test>
-<status status="PASS" start="2026-03-04T20:35:28.935434" elapsed="0.042635"/>
+<status status="PASS" start="2026-03-04T20:41:00.679200" elapsed="0.029969"/>
 </suite>
-<status status="PASS" start="2026-03-04T20:35:28.931109" elapsed="0.057323"/>
+<status status="PASS" start="2026-03-04T20:41:00.670212" elapsed="0.041689"/>
 </suite>
-<status status="PASS" start="2026-03-04T20:35:28.926687" elapsed="0.064755"/>
+<status status="PASS" start="2026-03-04T20:41:00.666973" elapsed="0.052081"/>
 </suite>
-<status status="PASS" start="2026-03-04T20:35:28.898388" elapsed="0.096100"/>
+<status status="PASS" start="2026-03-04T20:41:00.635953" elapsed="0.086772"/>
 </suite>
 <statistics>
 <total>
@@ -67,7 +37,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-03" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-03</stat>
+<stat name="Exercicio-04" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-04</stat>
 </suite>
 </statistics>
 <errors>
