@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T19:53:53.893736" rpa="true" schemaversion="5">
+<suite id="s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
+<suite id="s1-s1" name="Exercicio-Operadores" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicio-operadores.robot">
+<test id="s1-s1-t1" name="Operações Matemáticas" line="4">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nSoma: ${2 + 4}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-04T19:53:53.944526" elapsed="0.000916"/>
+</kw>
+<status status="PASS" start="2026-03-04T19:53:53.941331" elapsed="0.004413"/>
+</test>
+<status status="PASS" start="2026-03-04T19:53:53.931655" elapsed="0.017225"/>
+</suite>
+<status status="PASS" start="2026-03-04T19:53:53.897698" elapsed="0.057549"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Lógica" id="s1" pass="1" fail="0" skip="0">Lógica</stat>
+<stat name="Exercicio-Operadores" id="s1-s1" pass="1" fail="0" skip="0">Lógica.Exercicio-Operadores</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
