@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T21:17:57.631580" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T21:29:05.391391" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-06" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-06.robot">
-<test id="s1-s1-s1-s1-t1" name="Conversão para Fahrenheit" line="5">
+<suite id="s1-s1-s1-s1" name="Exercicio-07" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-07.robot">
+<test id="s1-s1-s1-s1-t1" name="Quociente e Resto" line="6">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-04T21:17:57.679778" level="INFO">${F} = 77.0</msg>
-<var>${F}</var>
-<arg>${C} * 1.8 + 32</arg>
+<msg time="2026-03-04T21:29:05.487769" level="INFO">${QUOCIENTE} = 2</msg>
+<var>${QUOCIENTE}</var>
+<arg>${DIVIDENDO} // ${DIVISOR}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-04T21:17:57.679193" elapsed="0.000732"/>
+<status status="PASS" start="2026-03-04T21:29:05.487137" elapsed="0.000923"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-04T21:29:05.488894" level="INFO">${RESTO} = 5</msg>
+<var>${RESTO}</var>
+<arg>${DIVIDENDO} % ${DIVISOR}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-04T21:29:05.488412" elapsed="0.000656"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n${F}</arg>
+<arg>\nDividendo:${DIVIDENDO}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T21:17:57.680263" elapsed="0.000423"/>
+<status status="PASS" start="2026-03-04T21:29:05.489337" elapsed="0.000396"/>
 </kw>
-<status status="PASS" start="2026-03-04T21:17:57.675455" elapsed="0.005417"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nDivisor:${DIVISOR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-04T21:29:05.489930" elapsed="0.000386"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nQuociente:${QUOCIENTE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-04T21:29:05.490466" elapsed="0.000312"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nResto:${RESTO}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-04T21:29:05.490915" elapsed="0.000285"/>
+</kw>
+<status status="PASS" start="2026-03-04T21:29:05.484332" elapsed="0.007039"/>
 </test>
-<status status="PASS" start="2026-03-04T21:17:57.667883" elapsed="0.015247"/>
+<status status="PASS" start="2026-03-04T21:29:05.480261" elapsed="0.016008"/>
 </suite>
-<status status="PASS" start="2026-03-04T21:17:57.665012" elapsed="0.026709"/>
+<status status="PASS" start="2026-03-04T21:29:05.472778" elapsed="0.029217"/>
 </suite>
-<status status="PASS" start="2026-03-04T21:17:57.661737" elapsed="0.033686"/>
+<status status="PASS" start="2026-03-04T21:29:05.458905" elapsed="0.051698"/>
 </suite>
-<status status="PASS" start="2026-03-04T21:17:57.635302" elapsed="0.068464"/>
+<status status="PASS" start="2026-03-04T21:29:05.396973" elapsed="0.116965"/>
 </suite>
 <statistics>
 <total>
@@ -37,7 +59,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-06" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-06</stat>
+<stat name="Exercicio-07" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-07</stat>
 </suite>
 </statistics>
 <errors>
