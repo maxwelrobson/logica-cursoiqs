@@ -1,41 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T20:50:38.419744" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T21:17:57.631580" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-05" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-05.robot">
-<test id="s1-s1-s1-s1-t1" name="Cálculo de Salário anual" line="8">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nHoras trabalhadas no ano: ${HORA_TRABALHADA}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:50:38.521657" elapsed="0.000681"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nHoras extras trabalhadas no ano: ${HORA_EXTRA_TRABALHADA}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:50:38.522938" elapsed="0.000852"/>
-</kw>
+<suite id="s1-s1-s1-s1" name="Exercicio-06" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-06.robot">
+<test id="s1-s1-s1-s1-t1" name="Conversão para Fahrenheit" line="5">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-04T20:50:38.524497" level="INFO">${SALARIO_ANUAL} = 23600.0</msg>
-<var>${SALARIO_ANUAL}</var>
-<arg>${HORA_TRABALHADA} * ${HORA_NORMAL} + ${HORA_EXTRA_TRABALHADA} * ${HORA_EXTRA}</arg>
+<msg time="2026-03-04T21:17:57.679778" level="INFO">${F} = 77.0</msg>
+<var>${F}</var>
+<arg>${C} * 1.8 + 32</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-04T20:50:38.524004" elapsed="0.000669"/>
+<status status="PASS" start="2026-03-04T21:17:57.679193" elapsed="0.000732"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nSeu salário anual é de: R$:${SALARIO_ANUAL}</arg>
+<arg>\n${F}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T20:50:38.525054" elapsed="0.000591"/>
+<status status="PASS" start="2026-03-04T21:17:57.680263" elapsed="0.000423"/>
 </kw>
-<status status="PASS" start="2026-03-04T20:50:38.507869" elapsed="0.018051"/>
+<status status="PASS" start="2026-03-04T21:17:57.675455" elapsed="0.005417"/>
 </test>
-<status status="PASS" start="2026-03-04T20:50:38.492955" elapsed="0.042821"/>
+<status status="PASS" start="2026-03-04T21:17:57.667883" elapsed="0.015247"/>
 </suite>
-<status status="PASS" start="2026-03-04T20:50:38.472823" elapsed="0.074923"/>
+<status status="PASS" start="2026-03-04T21:17:57.665012" elapsed="0.026709"/>
 </suite>
-<status status="PASS" start="2026-03-04T20:50:38.466077" elapsed="0.085494"/>
+<status status="PASS" start="2026-03-04T21:17:57.661737" elapsed="0.033686"/>
 </suite>
-<status status="PASS" start="2026-03-04T20:50:38.423786" elapsed="0.138379"/>
+<status status="PASS" start="2026-03-04T21:17:57.635302" elapsed="0.068464"/>
 </suite>
 <statistics>
 <total>
@@ -47,7 +37,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-05" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-05</stat>
+<stat name="Exercicio-06" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-06</stat>
 </suite>
 </statistics>
 <errors>
