@@ -1,58 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T11:26:15.773569" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T11:45:39.700753" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-21" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-21.robot">
-<test id="s1-s1-s1-s1-t1" name="Idade para voto" line="8">
+<suite id="s1-s1-s1-s1" name="Exercicio-22" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-22.robot">
+<test id="s1-s1-s1-s1-t1" name="Números multiplos" line="7">
 <kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T11:26:18.008208" level="INFO">${IDADE} = 71</msg>
-<var>${IDADE}</var>
-<arg>\nDigite sua idade:</arg>
+<msg time="2026-03-05T11:45:42.436483" level="INFO">${n1} = 27</msg>
+<var>${n1}</var>
+<arg>\nDigite o primeiro número:</arg>
 <doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T11:26:15.843204" elapsed="2.165477"/>
+<status status="PASS" start="2026-03-05T11:45:39.772756" elapsed="2.664151"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nIdade: ${IDADE}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-05T11:26:18.009372" elapsed="0.000559"/>
+<kw name="Get Value From User" owner="Dialogs">
+<msg time="2026-03-05T11:45:44.423553" level="INFO">${n2} = 2</msg>
+<var>${n2}</var>
+<arg>\nDigite o segundo número:</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<status status="PASS" start="2026-03-05T11:45:42.437501" elapsed="1.986428"/>
 </kw>
 <if>
-<branch type="IF" condition="${IDADE} &lt; 16">
+<branch type="IF" condition="${n1} != 0 and ${n2} != 0">
+<if>
+<branch type="IF" condition="${n1} % ${n2} == 0 or ${n2} % ${n1} == 0">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nNão pode votar</arg>
+<arg>\n${n1} e ${n2} são multiplos um do outro.</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T11:26:18.010560" elapsed="0.000111"/>
+<status status="NOT RUN" start="2026-03-05T11:45:44.425960" elapsed="0.000166"/>
 </kw>
-<status status="NOT RUN" start="2026-03-05T11:26:18.010177" elapsed="0.000573"/>
-</branch>
-<branch type="ELSE IF" condition="${IDADE} &gt;= 16 and ${IDADE} &lt;= 17 or ${IDADE} &gt; 70">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nVoto opcional</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-05T11:26:18.011098" elapsed="0.000480"/>
-</kw>
-<status status="PASS" start="2026-03-05T11:26:18.010797" elapsed="0.000889"/>
+<status status="NOT RUN" start="2026-03-05T11:45:44.425270" elapsed="0.001033"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nVoto obrigatório</arg>
+<arg>\n${n1} e ${n2} não são multiplos um do outro.</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T11:26:18.011909" elapsed="0.000070"/>
+<status status="PASS" start="2026-03-05T11:45:44.427279" elapsed="0.003048"/>
 </kw>
-<status status="NOT RUN" start="2026-03-05T11:26:18.011731" elapsed="0.000336"/>
+<status status="PASS" start="2026-03-05T11:45:44.426592" elapsed="0.004205"/>
 </branch>
-<status status="PASS" start="2026-03-05T11:26:18.010142" elapsed="0.001971"/>
+<status status="PASS" start="2026-03-05T11:45:44.425225" elapsed="0.005864"/>
 </if>
-<status status="PASS" start="2026-03-05T11:26:15.839051" elapsed="2.173806"/>
+<status status="PASS" start="2026-03-05T11:45:44.424483" elapsed="0.006716"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nMúltiplos devem ser diferentes de zero</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-03-05T11:45:44.431658" elapsed="0.000442"/>
+</kw>
+<status status="NOT RUN" start="2026-03-05T11:45:44.431355" elapsed="0.000992"/>
+</branch>
+<status status="PASS" start="2026-03-05T11:45:44.424442" elapsed="0.008084"/>
+</if>
+<status status="PASS" start="2026-03-05T11:45:39.769691" elapsed="4.663179"/>
 </test>
-<status status="PASS" start="2026-03-05T11:26:15.816720" elapsed="2.213642"/>
+<status status="PASS" start="2026-03-05T11:45:39.750757" elapsed="4.699147"/>
 </suite>
-<status status="PASS" start="2026-03-05T11:26:15.813994" elapsed="2.229356"/>
+<status status="PASS" start="2026-03-05T11:45:39.742584" elapsed="4.718276"/>
 </suite>
-<status status="PASS" start="2026-03-05T11:26:15.810418" elapsed="2.249237"/>
+<status status="PASS" start="2026-03-05T11:45:39.739109" elapsed="4.734486"/>
 </suite>
-<status status="PASS" start="2026-03-05T11:26:15.777647" elapsed="2.291766"/>
+<status status="PASS" start="2026-03-05T11:45:39.704525" elapsed="4.781348"/>
 </suite>
 <statistics>
 <total>
@@ -64,7 +72,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-21" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-21</stat>
+<stat name="Exercicio-22" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-22</stat>
 </suite>
 </statistics>
 <errors>
