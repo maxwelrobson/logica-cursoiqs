@@ -1,100 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T09:38:33.160603" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T09:51:47.871158" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-14" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-14.robot">
-<test id="s1-s1-s1-s1-t1" name="Calculadora Simples" line="10">
+<suite id="s1-s1-s1-s1" name="Exercicio-17" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-17.robot">
+<test id="s1-s1-s1-s1-t1" name="Cálculo dos pães e 10%" line="9">
 <kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T09:38:35.201835" level="INFO">${N1} = 20</msg>
-<var>${N1}</var>
-<arg>Primeiro Número:</arg>
+<msg time="2026-03-05T09:51:50.337665" level="INFO">${quantidade_pao} = 100</msg>
+<var>${quantidade_pao}</var>
+<arg>Total de pães vendidos:</arg>
 <doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T09:38:33.232392" elapsed="1.969882"/>
-</kw>
-<kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T09:38:36.343582" level="INFO">${OP} = /</msg>
-<var>${OP}</var>
-<arg>Operação: soma (+), subtração (-), multiplicação (*), divisão (/)</arg>
-<doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T09:38:35.202697" elapsed="1.141128"/>
+<status status="PASS" start="2026-03-05T09:51:47.972960" elapsed="2.364922"/>
 </kw>
 <kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T09:38:37.683320" level="INFO">${N2} = 4</msg>
-<var>${N2}</var>
-<arg>Segundo Número:</arg>
+<msg time="2026-03-05T09:51:52.019237" level="INFO">${quantidade_broa} = 50</msg>
+<var>${quantidade_broa}</var>
+<arg>Total de broas vendidas:</arg>
 <doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T09:38:36.344471" elapsed="1.339041"/>
+<status status="PASS" start="2026-03-05T09:51:50.338596" elapsed="1.681036"/>
 </kw>
-<if>
-<branch type="IF" condition="&quot;${OP}&quot; == &quot;+&quot;">
 <kw name="Evaluate" owner="BuiltIn">
-<var>${resultado}</var>
-<arg>${N1} + ${N2}</arg>
+<msg time="2026-03-05T09:51:52.021253" level="INFO">${total_pao} = 50.0</msg>
+<var>${total_pao}</var>
+<arg>${PÃO} * ${quantidade_pao}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2026-03-05T09:38:37.687028" elapsed="0.000392"/>
+<status status="PASS" start="2026-03-05T09:51:52.020317" elapsed="0.001123"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T09:51:52.022260" level="INFO">${total_broa} = 250.0</msg>
+<var>${total_broa}</var>
+<arg>${BROA} * ${quantidade_broa}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T09:51:52.021811" elapsed="0.000572"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T09:51:52.023402" level="INFO">${valor_total} = 300.0</msg>
+<var>${valor_total}</var>
+<arg>${total_pao} + ${total_broa}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T09:51:52.022837" elapsed="0.000762"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T09:51:52.024524" level="INFO">${poupanca} = 30.0</msg>
+<var>${poupanca}</var>
+<arg>${valor_total} / 10</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T09:51:52.023917" elapsed="0.000794"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n${N1} ${OP} ${N2} = ${resultado}</arg>
+<arg>\nTotal de vendas de pães: ${total_pao}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T09:38:37.687929" elapsed="0.002773"/>
-</kw>
-<status status="NOT RUN" start="2026-03-05T09:38:37.684957" elapsed="0.005941"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${OP}&quot; == &quot;-&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${resultado}</var>
-<arg>${N1} - ${N2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2026-03-05T09:38:37.692226" elapsed="0.000446"/>
+<status status="PASS" start="2026-03-05T09:51:52.025149" elapsed="0.001390"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n${N1} ${OP} ${N2} = ${resultado}</arg>
+<arg>\nTotal de vendas de broas: ${total_broa}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T09:38:37.692855" elapsed="0.000087"/>
-</kw>
-<status status="NOT RUN" start="2026-03-05T09:38:37.691496" elapsed="0.001534"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${OP}&quot; == &quot;*&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${resultado}</var>
-<arg>${N1} * ${N2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2026-03-05T09:38:37.693694" elapsed="0.000100"/>
+<status status="PASS" start="2026-03-05T09:51:52.027360" elapsed="0.000845"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n${N1} ${OP} ${N2} = ${resultado}</arg>
+<arg>\nValor total: ${valor_total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T09:38:37.694151" elapsed="0.000182"/>
-</kw>
-<status status="NOT RUN" start="2026-03-05T09:38:37.693091" elapsed="0.001436"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${OP}&quot; == &quot;/&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-05T09:38:37.695559" level="INFO">${resultado} = 5</msg>
-<var>${resultado}</var>
-<arg>${N1} // ${N2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-05T09:38:37.694862" elapsed="0.000873"/>
+<status status="PASS" start="2026-03-05T09:51:52.028471" elapsed="0.000949"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n${N1} ${OP} ${N2} = ${resultado}</arg>
+<arg>\nValor para guardar na poupança(10%): ${poupanca}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-05T09:38:37.695940" elapsed="0.001322"/>
+<status status="PASS" start="2026-03-05T09:51:52.030020" elapsed="0.001621"/>
 </kw>
-<status status="PASS" start="2026-03-05T09:38:37.694576" elapsed="0.002828"/>
-</branch>
-<status status="PASS" start="2026-03-05T09:38:37.684833" elapsed="0.012616"/>
-</if>
-<status status="PASS" start="2026-03-05T09:38:33.219994" elapsed="4.477817"/>
+<status status="PASS" start="2026-03-05T09:51:47.968981" elapsed="4.063279"/>
 </test>
-<status status="PASS" start="2026-03-05T09:38:33.197820" elapsed="4.508761"/>
+<status status="PASS" start="2026-03-05T09:51:47.950246" elapsed="4.107044"/>
 </suite>
-<status status="PASS" start="2026-03-05T09:38:33.194883" elapsed="4.524650"/>
+<status status="PASS" start="2026-03-05T09:51:47.946727" elapsed="4.115545"/>
 </suite>
-<status status="PASS" start="2026-03-05T09:38:33.191548" elapsed="4.531606"/>
+<status status="PASS" start="2026-03-05T09:51:47.933655" elapsed="4.133921"/>
 </suite>
-<status status="PASS" start="2026-03-05T09:38:33.164438" elapsed="4.561187"/>
+<status status="PASS" start="2026-03-05T09:51:47.875189" elapsed="4.200534"/>
 </suite>
 <statistics>
 <total>
@@ -106,7 +87,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-14" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-14</stat>
+<stat name="Exercicio-17" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-17</stat>
 </suite>
 </statistics>
 <errors>
