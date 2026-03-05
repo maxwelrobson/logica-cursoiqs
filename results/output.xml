@@ -1,31 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T21:50:25.398244" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T22:14:30.694278" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-09" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-09.robot">
-<test id="s1-s1-s1-s1-t1" name="Média de consumo" line="6">
+<suite id="s1-s1-s1-s1" name="Exercicio-10" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-10.robot">
+<test id="s1-s1-s1-s1-t1" name="Conversão se segundos para HMS" line="5">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-04T21:50:25.450477" level="INFO">${MEDIA} = 25.0</msg>
-<var>${MEDIA}</var>
-<arg>${DISTANCIA} / ${TOTAL_COMBUSTIVEL}</arg>
+<msg time="2026-03-04T22:14:30.759481" level="INFO">${HORAS} = 7</msg>
+<var>${HORAS}</var>
+<arg>${SEGUNODS_TOTAIS} //3600</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-04T21:50:25.449871" elapsed="0.000914"/>
+<status status="PASS" start="2026-03-04T22:14:30.758717" elapsed="0.000948"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-04T22:14:30.760677" level="INFO">${RESTO} = 286</msg>
+<var>${RESTO}</var>
+<arg>${SEGUNODS_TOTAIS} % 3600</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-04T22:14:30.760252" elapsed="0.000551"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-04T22:14:30.761593" level="INFO">${MINUTOS} = 4</msg>
+<var>${MINUTOS}</var>
+<arg>${RESTO} // 60</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-04T22:14:30.761265" elapsed="0.000438"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-04T22:14:30.762273" level="INFO">${SEGUNDOS} = 46</msg>
+<var>${SEGUNDOS}</var>
+<arg>${RESTO} % 60</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-04T22:14:30.761951" elapsed="0.000477"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-04T22:14:30.763125" level="INFO">${resultado} = 07:04:46</msg>
+<var>${resultado}</var>
+<arg>"{:02d}:{:02d}:{:02d}".format(${horas}, ${minutos}, ${segundos})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-04T22:14:30.762662" elapsed="0.000567"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nConsumo médio do carro: ${MEDIA}</arg>
+<arg>\nTempo formatado: ${resultado}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T21:50:25.451039" elapsed="0.000680"/>
+<status status="PASS" start="2026-03-04T22:14:30.763425" elapsed="0.000439"/>
 </kw>
-<status status="PASS" start="2026-03-04T21:50:25.447396" elapsed="0.004585"/>
+<status status="PASS" start="2026-03-04T22:14:30.749997" elapsed="0.014056"/>
 </test>
-<status status="PASS" start="2026-03-04T21:50:25.443114" elapsed="0.024946"/>
+<status status="PASS" start="2026-03-04T22:14:30.746212" elapsed="0.024223"/>
 </suite>
-<status status="PASS" start="2026-03-04T21:50:25.435118" elapsed="0.035773"/>
+<status status="PASS" start="2026-03-04T22:14:30.735438" elapsed="0.043084"/>
 </suite>
-<status status="PASS" start="2026-03-04T21:50:25.430209" elapsed="0.043509"/>
+<status status="PASS" start="2026-03-04T22:14:30.725199" elapsed="0.056848"/>
 </suite>
-<status status="PASS" start="2026-03-04T21:50:25.402223" elapsed="0.078159"/>
+<status status="PASS" start="2026-03-04T22:14:30.698172" elapsed="0.086395"/>
 </suite>
 <statistics>
 <total>
@@ -37,7 +65,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-09" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-09</stat>
+<stat name="Exercicio-10" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-10</stat>
 </suite>
 </statistics>
 <errors>
