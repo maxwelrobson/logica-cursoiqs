@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T22:39:35.152726" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-04T23:20:09.195973" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-13" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-13.robot">
-<test id="s1-s1-s1-s1-t1" name="Valor máximo" line="6">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nNúmero 1: ${N1}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T22:39:35.207821" elapsed="0.000683"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nNúmero 2: ${N2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T22:39:35.208785" elapsed="0.000543"/>
-</kw>
+<suite id="s1-s1-s1-s1" name="Exercicio-15" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-15.robot">
+<test id="s1-s1-s1-s1-t1" name="Fila preferencial ou comum" line="7">
 <if>
-<branch type="IF" condition="${N1} &gt; ${N2}">
+<branch type="IF" condition="${IDADE} &gt; 65">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nO número ${N1} é maior que o número ${N2}</arg>
+<arg>\nFila Preferencial</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-04T22:39:35.209743" elapsed="0.000068"/>
+<status status="NOT RUN" start="2026-03-04T23:20:09.260113" elapsed="0.000462"/>
 </kw>
-<status status="NOT RUN" start="2026-03-04T22:39:35.209522" elapsed="0.000338"/>
+<status status="NOT RUN" start="2026-03-04T23:20:09.259244" elapsed="0.001474"/>
+</branch>
+<branch type="ELSE IF" condition="'${CONDICAO}' == 'deficiente' or '${CONDICAO}' == 'gestante'">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nFila Preferencial</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-04T23:20:09.261071" elapsed="0.000584"/>
+</kw>
+<status status="PASS" start="2026-03-04T23:20:09.260779" elapsed="0.000979"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nO número ${N2} é maior que o número ${N1}</arg>
+<arg>\nFila comum</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-04T22:39:35.210001" elapsed="0.000337"/>
+<status status="NOT RUN" start="2026-03-04T23:20:09.262001" elapsed="0.000098"/>
 </kw>
-<status status="PASS" start="2026-03-04T22:39:35.209902" elapsed="0.000510"/>
+<status status="NOT RUN" start="2026-03-04T23:20:09.261799" elapsed="0.000360"/>
 </branch>
-<status status="PASS" start="2026-03-04T22:39:35.209493" elapsed="0.000955"/>
+<status status="PASS" start="2026-03-04T23:20:09.259193" elapsed="0.002998"/>
 </if>
-<status status="PASS" start="2026-03-04T22:39:35.203727" elapsed="0.006863"/>
+<status status="PASS" start="2026-03-04T23:20:09.256118" elapsed="0.006295"/>
 </test>
-<status status="PASS" start="2026-03-04T22:39:35.198080" elapsed="0.025600"/>
+<status status="PASS" start="2026-03-04T23:20:09.238950" elapsed="0.039493"/>
 </suite>
-<status status="PASS" start="2026-03-04T22:39:35.190880" elapsed="0.041309"/>
+<status status="PASS" start="2026-03-04T23:20:09.234888" elapsed="0.046852"/>
 </suite>
-<status status="PASS" start="2026-03-04T22:39:35.186671" elapsed="0.048102"/>
+<status status="PASS" start="2026-03-04T23:20:09.230601" elapsed="0.057693"/>
 </suite>
-<status status="PASS" start="2026-03-04T22:39:35.157102" elapsed="0.080007"/>
+<status status="PASS" start="2026-03-04T23:20:09.200489" elapsed="0.091261"/>
 </suite>
 <statistics>
 <total>
@@ -54,7 +52,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-13" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-13</stat>
+<stat name="Exercicio-15" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-15</stat>
 </suite>
 </statistics>
 <errors>
