@@ -1,103 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T10:57:04.228239" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T11:26:15.773569" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-20" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-20.robot">
-<test id="s1-s1-s1-s1-t1" name="Cálculo IMC" line="10">
+<suite id="s1-s1-s1-s1" name="Exercicio-21" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-21.robot">
+<test id="s1-s1-s1-s1-t1" name="Idade para voto" line="8">
 <kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T10:57:06.896657" level="INFO">${PESO} = 90</msg>
-<var>${PESO}</var>
-<arg>\nDigite o peso:</arg>
+<msg time="2026-03-05T11:26:18.008208" level="INFO">${IDADE} = 71</msg>
+<var>${IDADE}</var>
+<arg>\nDigite sua idade:</arg>
 <doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T10:57:04.305845" elapsed="2.591103"/>
-</kw>
-<kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T10:57:09.398703" level="INFO">${ALTURA} = 1.80</msg>
-<var>${ALTURA}</var>
-<arg>\nDigite a altura:</arg>
-<doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T10:57:06.897413" elapsed="2.501583"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-05T10:57:09.401642" level="INFO">${IMC} = 27.777777777777775</msg>
-<var>${IMC}</var>
-<arg>${PESO} / (${ALTURA} * ${ALTURA})</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-05T10:57:09.399957" elapsed="0.002080"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-03-05T10:57:09.404121" level="INFO">${imc_formatado} = 27.78</msg>
-<var>${imc_formatado}</var>
-<arg>"{:02.2f}".format(${IMC})</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-03-05T10:57:09.402568" elapsed="0.001936"/>
+<status status="PASS" start="2026-03-05T11:26:15.843204" elapsed="2.165477"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nSeu IMC é: ${imc_formatado}</arg>
+<arg>\nIdade: ${IDADE}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-05T10:57:09.404940" elapsed="0.001359"/>
+<status status="PASS" start="2026-03-05T11:26:18.009372" elapsed="0.000559"/>
 </kw>
 <if>
-<branch type="IF" condition="${IMC} &lt;= 18.5">
+<branch type="IF" condition="${IDADE} &lt; 16">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nAbaixo do peso</arg>
+<arg>\nNão pode votar</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T10:57:09.407427" elapsed="0.000144"/>
+<status status="NOT RUN" start="2026-03-05T11:26:18.010560" elapsed="0.000111"/>
 </kw>
-<status status="NOT RUN" start="2026-03-05T10:57:09.406851" elapsed="0.000857"/>
+<status status="NOT RUN" start="2026-03-05T11:26:18.010177" elapsed="0.000573"/>
 </branch>
-<branch type="ELSE IF" condition="${IMC} &gt;= 18.6 and ${IMC} &lt;= 24.9">
+<branch type="ELSE IF" condition="${IDADE} &gt;= 16 and ${IDADE} &lt;= 17 or ${IDADE} &gt; 70">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nPeso ideal (parabéns)</arg>
+<arg>\nVoto opcional</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T10:57:09.408767" elapsed="0.000193"/>
+<status status="PASS" start="2026-03-05T11:26:18.011098" elapsed="0.000480"/>
 </kw>
-<status status="NOT RUN" start="2026-03-05T10:57:09.407903" elapsed="0.001223"/>
-</branch>
-<branch type="ELSE IF" condition="${IMC} &gt;= 25.0 and ${IMC} &lt;=29.9">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nLevemente acima do peso</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-05T10:57:09.410036" elapsed="0.000988"/>
-</kw>
-<status status="PASS" start="2026-03-05T10:57:09.409303" elapsed="0.001919"/>
-</branch>
-<branch type="ELSE IF" condition="${IMC} &gt;= 30.0 and ${IMC} &lt;= 34.9">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nObesidade grau I</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T10:57:09.412020" elapsed="0.000305"/>
-</kw>
-<status status="NOT RUN" start="2026-03-05T10:57:09.411435" elapsed="0.001026"/>
-</branch>
-<branch type="ELSE IF" condition="${IMC} &gt;= 35.0 and ${IMC} &lt;= 39.9">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nObesidade grau II (severa)</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T10:57:09.412864" elapsed="0.000137"/>
-</kw>
-<status status="NOT RUN" start="2026-03-05T10:57:09.412520" elapsed="0.000564"/>
+<status status="PASS" start="2026-03-05T11:26:18.010797" elapsed="0.000889"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nObesidade III (mórbida)</arg>
+<arg>\nVoto obrigatório</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T10:57:09.413593" elapsed="0.000395"/>
+<status status="NOT RUN" start="2026-03-05T11:26:18.011909" elapsed="0.000070"/>
 </kw>
-<status status="NOT RUN" start="2026-03-05T10:57:09.413222" elapsed="0.000885"/>
+<status status="NOT RUN" start="2026-03-05T11:26:18.011731" elapsed="0.000336"/>
 </branch>
-<status status="PASS" start="2026-03-05T10:57:09.406787" elapsed="0.007372"/>
+<status status="PASS" start="2026-03-05T11:26:18.010142" elapsed="0.001971"/>
 </if>
-<status status="PASS" start="2026-03-05T10:57:04.298968" elapsed="5.115578"/>
+<status status="PASS" start="2026-03-05T11:26:15.839051" elapsed="2.173806"/>
 </test>
-<status status="PASS" start="2026-03-05T10:57:04.276181" elapsed="5.155743"/>
+<status status="PASS" start="2026-03-05T11:26:15.816720" elapsed="2.213642"/>
 </suite>
-<status status="PASS" start="2026-03-05T10:57:04.272328" elapsed="5.166772"/>
+<status status="PASS" start="2026-03-05T11:26:15.813994" elapsed="2.229356"/>
 </suite>
-<status status="PASS" start="2026-03-05T10:57:04.263222" elapsed="5.183531"/>
+<status status="PASS" start="2026-03-05T11:26:15.810418" elapsed="2.249237"/>
 </suite>
-<status status="PASS" start="2026-03-05T10:57:04.232759" elapsed="5.229542"/>
+<status status="PASS" start="2026-03-05T11:26:15.777647" elapsed="2.291766"/>
 </suite>
 <statistics>
 <total>
@@ -109,7 +64,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-20" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-20</stat>
+<stat name="Exercicio-21" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-21</stat>
 </suite>
 </statistics>
 <errors>
