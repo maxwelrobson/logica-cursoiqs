@@ -1,66 +1,261 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T11:45:39.700753" rpa="true" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-05T14:26:13.850155" rpa="true" schemaversion="5">
 <suite id="s1" name="Curso IQS" source="C:\Users\maxps\Documents\Curso IQS">
 <suite id="s1-s1" name="Lógica" source="C:\Users\maxps\Documents\Curso IQS\Lógica">
 <suite id="s1-s1-s1" name="Exercicios-Material" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material">
-<suite id="s1-s1-s1-s1" name="Exercicio-22" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-22.robot">
-<test id="s1-s1-s1-s1-t1" name="Números multiplos" line="7">
+<suite id="s1-s1-s1-s1" name="Exercicio-23" source="C:\Users\maxps\Documents\Curso IQS\Lógica\exercicios-material\exercicio-23.robot">
+<test id="s1-s1-s1-s1-t1" name="Multiplicação até 10" line="8">
 <kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T11:45:42.436483" level="INFO">${n1} = 27</msg>
-<var>${n1}</var>
-<arg>\nDigite o primeiro número:</arg>
+<msg time="2026-03-05T14:26:16.297090" level="INFO">${n} = 6</msg>
+<var>${n}</var>
+<arg>\nDigite um número:</arg>
 <doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T11:45:39.772756" elapsed="2.664151"/>
+<status status="PASS" start="2026-03-05T14:26:13.917518" elapsed="2.379954"/>
 </kw>
-<kw name="Get Value From User" owner="Dialogs">
-<msg time="2026-03-05T11:45:44.423553" level="INFO">${n2} = 2</msg>
-<var>${n2}</var>
-<arg>\nDigite o segundo número:</arg>
-<doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2026-03-05T11:45:42.437501" elapsed="1.986428"/>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.300761" level="INFO">${i} = 1</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.299145" elapsed="0.002264"/>
 </kw>
-<if>
-<branch type="IF" condition="${n1} != 0 and ${n2} != 0">
-<if>
-<branch type="IF" condition="${n1} % ${n2} == 0 or ${n2} % ${n1} == 0">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.303305" level="INFO">${resultado} = 6</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.302143" elapsed="0.001593"/>
+</kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n${n1} e ${n2} são multiplos um do outro.</arg>
+<arg>\n${n} x ${i} = ${resultado}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T11:45:44.425960" elapsed="0.000166"/>
+<status status="PASS" start="2026-03-05T14:26:16.304009" elapsed="0.001063"/>
 </kw>
-<status status="NOT RUN" start="2026-03-05T11:45:44.425270" elapsed="0.001033"/>
-</branch>
-<branch type="ELSE">
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-05T14:26:16.298505" elapsed="0.006887"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.308495" level="INFO">${i} = 2</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.306758" elapsed="0.002364"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.310937" level="INFO">${resultado} = 12</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.309621" elapsed="0.001885"/>
+</kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\n${n1} e ${n2} não são multiplos um do outro.</arg>
+<arg>\n${n} x ${i} = ${resultado}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-03-05T11:45:44.427279" elapsed="0.003048"/>
+<status status="PASS" start="2026-03-05T14:26:16.311886" elapsed="0.001609"/>
 </kw>
-<status status="PASS" start="2026-03-05T11:45:44.426592" elapsed="0.004205"/>
-</branch>
-<status status="PASS" start="2026-03-05T11:45:44.425225" elapsed="0.005864"/>
-</if>
-<status status="PASS" start="2026-03-05T11:45:44.424483" elapsed="0.006716"/>
-</branch>
-<branch type="ELSE">
+<var name="${i}">1</var>
+<status status="PASS" start="2026-03-05T14:26:16.306390" elapsed="0.007378"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.314616" level="INFO">${i} = 3</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.314177" elapsed="0.000705"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.315597" level="INFO">${resultado} = 18</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.315023" elapsed="0.000744"/>
+</kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nMúltiplos devem ser diferentes de zero</arg>
+<arg>\n${n} x ${i} = ${resultado}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-03-05T11:45:44.431658" elapsed="0.000442"/>
+<status status="PASS" start="2026-03-05T14:26:16.315884" elapsed="0.000620"/>
 </kw>
-<status status="NOT RUN" start="2026-03-05T11:45:44.431355" elapsed="0.000992"/>
-</branch>
-<status status="PASS" start="2026-03-05T11:45:44.424442" elapsed="0.008084"/>
-</if>
-<status status="PASS" start="2026-03-05T11:45:39.769691" elapsed="4.663179"/>
+<var name="${i}">2</var>
+<status status="PASS" start="2026-03-05T14:26:16.313965" elapsed="0.002629"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.317237" level="INFO">${i} = 4</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.316855" elapsed="0.000621"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.318011" level="INFO">${resultado} = 24</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.317603" elapsed="0.000542"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${n} x ${i} = ${resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.318263" elapsed="0.000817"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2026-03-05T14:26:16.316715" elapsed="0.002593"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.320269" level="INFO">${i} = 5</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.319858" elapsed="0.000821"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.321681" level="INFO">${resultado} = 30</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.320946" elapsed="0.001073"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${n} x ${i} = ${resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.322422" elapsed="0.000840"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2026-03-05T14:26:16.319678" elapsed="0.003734"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.324075" level="INFO">${i} = 6</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.323744" elapsed="0.000492"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.324675" level="INFO">${resultado} = 36</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.324355" elapsed="0.000524"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${n} x ${i} = ${resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.324998" elapsed="0.000808"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2026-03-05T14:26:16.323585" elapsed="0.002300"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.326393" level="INFO">${i} = 7</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.326101" elapsed="0.000522"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.327211" level="INFO">${resultado} = 42</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.326824" elapsed="0.000684"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${n} x ${i} = ${resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.328423" elapsed="0.000961"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2026-03-05T14:26:16.325985" elapsed="0.003499"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.330359" level="INFO">${i} = 8</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.329893" elapsed="0.000844"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.331497" level="INFO">${resultado} = 48</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.330909" elapsed="0.000793"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${n} x ${i} = ${resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.331823" elapsed="0.000445"/>
+</kw>
+<var name="${i}">7</var>
+<status status="PASS" start="2026-03-05T14:26:16.329733" elapsed="0.002598"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.332810" level="INFO">${i} = 9</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.332529" elapsed="0.000388"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.333354" level="INFO">${resultado} = 54</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.333016" elapsed="0.000430"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${n} x ${i} = ${resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.333538" elapsed="0.000439"/>
+</kw>
+<var name="${i}">8</var>
+<status status="PASS" start="2026-03-05T14:26:16.332426" elapsed="0.001690"/>
+</iter>
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.334637" level="INFO">${i} = 10</msg>
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.334306" elapsed="0.000456"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-05T14:26:16.335326" level="INFO">${resultado} = 60</msg>
+<var>${resultado}</var>
+<arg>${n} * ${i}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.334874" elapsed="0.000579"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${n} x ${i} = ${resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-05T14:26:16.335558" elapsed="0.000579"/>
+</kw>
+<var name="${i}">9</var>
+<status status="PASS" start="2026-03-05T14:26:16.334208" elapsed="0.002223"/>
+</iter>
+<var>${i}</var>
+<value>10</value>
+<status status="PASS" start="2026-03-05T14:26:16.297997" elapsed="0.038579"/>
+</for>
+<status status="PASS" start="2026-03-05T14:26:13.911849" elapsed="2.425091"/>
 </test>
-<status status="PASS" start="2026-03-05T11:45:39.750757" elapsed="4.699147"/>
+<status status="PASS" start="2026-03-05T14:26:13.888501" elapsed="2.461897"/>
 </suite>
-<status status="PASS" start="2026-03-05T11:45:39.742584" elapsed="4.718276"/>
+<status status="PASS" start="2026-03-05T14:26:13.885809" elapsed="2.476615"/>
 </suite>
-<status status="PASS" start="2026-03-05T11:45:39.739109" elapsed="4.734486"/>
+<status status="PASS" start="2026-03-05T14:26:13.882443" elapsed="2.484500"/>
 </suite>
-<status status="PASS" start="2026-03-05T11:45:39.704525" elapsed="4.781348"/>
+<status status="PASS" start="2026-03-05T14:26:13.854521" elapsed="2.514751"/>
 </suite>
 <statistics>
 <total>
@@ -72,7 +267,7 @@
 <stat name="Curso IQS" id="s1" pass="1" fail="0" skip="0">Curso IQS</stat>
 <stat name="Lógica" id="s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica</stat>
 <stat name="Exercicios-Material" id="s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material</stat>
-<stat name="Exercicio-22" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-22</stat>
+<stat name="Exercicio-23" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Curso IQS.Lógica.Exercicios-Material.Exercicio-23</stat>
 </suite>
 </statistics>
 <errors>
